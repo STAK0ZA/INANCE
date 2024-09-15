@@ -94,6 +94,14 @@ body{
   .nav a:hover{
     color: var(--button-color);
   }
+  @media (max-width: 768px) {
+    .up-header{
+      flex-direction:column;
+    }
+    .home-words h1{
+      font-size:25px !important;
+    }
+  }
   /* end nav */
   /* start home */
   .home{
@@ -321,12 +329,6 @@ body{
     background-color: white;
   }
   @media (max-width: 768px) {
-    .ser-cards div:nth-child(3){
-        grid-column-start: 1;
-    grid-column-end: 3;
-    width: 50%;
-    margin: auto;
-    }
     .ser-cards{
         grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
       }
@@ -377,9 +379,16 @@ display: flex;
         }
         .say-card{
             margin: 15px auto;
+            text-align:center;
         }
         .arrow{
             display: none !important;
+        }
+        .half-part{
+          display:block;
+        }
+        .scale{
+          display:block;
         }
 }
 .arrow{
@@ -454,6 +463,9 @@ background-color: var(--hover-color);
   }
   .inputs input:nth-child(4){
     height: 100px;
+  }
+  .inputs input:nth-child(5){
+    width:100%;
   }
 }
 /* end contact */
